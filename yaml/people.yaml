@@ -1,0 +1,148 @@
+---
+# The following are the members of the Tarasov lab, both current and alumni
+# Note that the bio text should be written in Markdown format. For example, words or phrases
+#   can be italicized by *putting them between asterisks*
+# All other values can be entered as is
+# If there is no value for a particular field (e.g., a person does not have a Github site), 
+#   that field and value should be omitted from that person's block (i.e., don't put in 
+#   the field and leave the value empty)
+# To move an individual from the current lab members section to the alumni (or vice versa), 
+#   just cut and paste their data block from one section to the other.
+
+labmembers:
+    - status: Current Lab Members
+      people:
+      - name: Sergei Tarasov
+        role: PI
+        email: sergei.tarasov@helsinki.fi
+        scholar: https://scholar.google.fi/citations?user=CqTq-BkAAAAJ&hl=en
+        github: https://github.com/sergeitarasov
+        twitter: https://twitter.com/tarasov_sergio
+        cv: pdf/cv_Tarasov_20250401.pdf
+        photo: webp/People-photo-Sergei-Tarasov-768x768.webp
+        bio: |
+            I am a Coleoptera curator and an Academy research fellow at the Finnish Museum of Natural History. My research interests are bifurcated into two primary domains: empirical and theoretical. Within the empirical aspect, I concentrate on the systematics of dung beetles to reconstruct their evolutionary history and describe their diversity. The insights derived from these empirical explorations form the basis for my theoretical investigations. This domain of my research involves the development of new computational tools and statistical models for analyzing traits and modeling their evolution on phylogenetic trees in order to address a broad range of evolutionary questions.
+
+      - name: Salvador Arias
+        role: Postdoc
+        email: jsalarias@gmail.com
+        researchgate: https://www.researchgate.net/profile/J-Salvador-Arias
+        scholar: https://scholar.google.com/citations?user=Bp8I56wAAAAJ
+        github: https://github.com/js-arias
+        photo: webp/People-photo-Salvador-Arias-square.webp
+        bio: |
+            I am a postdoctoral researcher at the Finnish Museum of Natural History and a researcher in the CONICET (Argentina). I studied biology in Colombia and did my doctoral research in Argentina. My research focus is on the development of computational tools for using phylogenetic trees to study evolution. Currently I am working on models to understand the evolution of morphological traits (phylogenetic comparative methods). I also worked on integrating phylogenetic trees with plate tectonics to reconstruct the history of the geographic distributions (phylogenetic biogeography). Aside from biogeography and phylogenetics, I like to talk about software development and the Go programming language.
+
+      - name: Federica Losacco
+        role: PhD Student
+        email: federicalosacco@gmail.com
+        github: https://github.com/federicalosacco
+        twitter: https://twitter.com/_FedeLosacco
+        researchgate: https://www.researchgate.net/profile/Federica-Losacco
+        photo: webp/People-photo-Federica-Losacco-square-300x300.webp
+        bio: |
+            I am presently pursuing my Ph.D. at the Finnish Museum of Natural History (LUOMUS) investigating the evolution of Scarab beetle horns through morpho-molecular analyses and targeted behavioral experiments. My interest in Coleoptera began over a decade ago, and has since led me to explore a wide range of research fields, from taxonomy and systematics, to museum collections, morphology, and phylogenetics. Today, I am bringing these interests together to study one of the most fascinating questions in evolutionary biology: how evolutionary novelties arise and diversify. Alongside my research, I am strengthening my expertise in ancient DNA extraction and analysis, as well as 3D imaging techniques to study biomechanics in insects. I have always enjoyed fieldwork as part of my research, and have a strong passion for insect macrophotography, both for scientific projects and capturing beetles in their natural habitats. When I'm not working, you'll often find me fishing, wild camping, or filling a notebook with drawings.
+
+      - name: Frédéric Lozes-Méléro
+        role: PhD Student
+        photo: jpeg/People-photo-Frederic-Lozes-Melero-square-300x300.JPG
+        bio: |
+            I am a PhD student at the Finnish Museum of Natural History (LUOMUS). My research interests center on fundamental questions in natural history and macroevolution, in particular what drives speciation and lineage diversification, what factors shape global biogeographical patterns, and how such extraordinary phenotypic diversity can occur within a clade. My research will focus on the evolutionary history of dung beetles (Coleoptera: Scarabaeinae), particularly the factors underlying their species and morphological diversity, including co-evolutionary dynamics with mammals, behavioral strategies (e.g., tunneling, rolling), and paleoenvironmental shifts such as the Miocene grassland expansions, time permitting. To this end, I will combine phylogenomics, phenomics, and comparative macroevolutionary models. Before moving to Finland, I completed a Master’s degree in Ecology and Evolution at the University of Toulouse (France), where my research focused on the phylogenetic and biogeographical reconstruction of Neotropical primates. Looking ahead, I plan to be involved in teaching at the Faculty of Science at the University of Helsinki. In my spare time, I enjoy landscape and street photography, hiking, scuba diving, and sports like football and skiing.
+
+      - name: Wei Zhao
+        role: Visiting PhD Student
+        photo: jpeg/People-photo-Wei-Zhao-square-300x300.JPG
+        bio: |
+            I am a PhD student at Capital Normal University and a visiting researcher at the Finnish Museum of Natural History (LUOMUS). My research focuses on the taxonomy and evolution of fossil beetles, particularly Mesozoic Elateriformia from China and Burmese amber. I mainly work on click beetles, jewel beetles, and firefly-related groups. My research uses morphological and phylogenetic approaches to understand the systematic positions and evolutionary history of fossil beetles.
+
+      - name: Alexandra Gorbonos
+        role: Lab Associate
+        email: aagorbonos@gmail.com
+        scholar: https://scholar.google.com/citations?user=LpIz_-4AAAAJ&hl=en&authuser=1
+        github: https://github.com/IlonaGA
+        photo: webp/People-photo-Alexandra-Gorbonos-square.webp
+        bio: |
+            I am currently obtaining an MSc degree in Bioinformatics and Digital Health at Aalto University School of Science. My research interests primarily focus on genomic data analysis, particularly Next-Generation Sequencing (NGS), including de novo genome assembly and the application of machine learning techniques.Currently, I am working on the assembly of dung beetle genomes with a focus on potential population size history analysis. Additionally, I am part of a collaborative project between Aalto University and the University of Helsinki, where we are developing a new, more efficient dung beetle trap. This trap will feature smart elements such as location tracking, temperature, and humidity sensors, aimed at simplifying the beetle collection process and improving ease of installation.
+
+      - name: Md Rifath Ahamed
+        role: MSc Student
+        photo: webp/People-photo-Md-Rifath-Ahamed-square-300x300.webp
+        bio: |
+            I am a MSc student in Ecology and Evolutionary Biology at the University of Helsinki. I studied Fisheries and Marine Bioscience in Bangladesh before coming to Finland for my master's. I am currently developing phylorug, an R package for reproducibly visualizing node support from multiple phylogenomic analyses. The package is being developed as my master's thesis in the Tarasov Lab at the Finnish Museum of Natural History (LUOMUS), where my work focuses on dung beetles (Scarabaeinae and Aphodiinae) as the primary test dataset. I am broadly interested in phylogenomics and macroevolution, and curious about what phylogenetic methods can tell us about how groups diversify and traits change over time. Outside of research, I enjoy photography, sketching, hiking, and making new friends.
+
+      - name: Välke Jolma
+        role: MA Student
+        photo: webp/People-photo-Valke-Jolma-square-300x300.webp
+        bio: |
+            I am a MA student in phonetics and MSc student in bioinformatics at the University of Helsinki. My interests are various and often interdisciplinary, ranging from acoustic communication in elephants to insect genomics and mathematical modelling. At the moment I am working on reconstructing demographic history of dung beetles.
+
+      - name: Leo Liedes
+        role: MSc Student
+        photo: webp/People-photo-Leo-Liedes-square-300x300.webp
+        bio: |
+            I am a MSc student of ecology and evolutionary biology at the University of Helsinki. Currently working on my thesis project in the Tarasov lab. I am mapping the ancestral ranges of *Helictopleurus* dung beetles to determine the ecological factors that have shaped their spatial distribution. I am interested in animal diversity, and in the types of interactions they have with each other and their surroundings. I am fascinated by the unique adaptations that allow species to thrive in their environments.
+     
+    - status: Lab Alumni
+      people:
+      - name: Diego Porto
+        role: Postdoc
+        email: diegosporto@gmail.com
+        scholar: https://scholar.google.com/citations?user=hRTdDu4AAAAJ
+        github: https://github.com/diegosasso
+        twitter: https://twitter.com/PortoSasso
+        photo: webp/People-photo-Diego-Porto-square.webp
+        bio: |
+            I was a postdoctoral researcher at the Finnish Museum of Natural History (LUOMUS). My research focused on the development and application of new phylogenetic and semantic tools integrating knowledge from insect anatomy and computational ontologies. In simple terms, I worked to make computers ‘understand’ insect anatomy and use this knowledge to produce better models to study trait evolution and infer phylogenies. My focal interests are the systematics and comparative morphology of bees. My broad interests include insect anatomy, arthropod phylogeny, systematics, phylogenetic comparative methods, and computational ontologies.
+
+      - name: Fernando Lopes
+        role: Postdoc
+        email: nandulopes@gmail.com
+        scholar: https://scholar.google.com/citations?user=Hp_pBHAAAAAJ&hl=en
+        twitter: https://twitter.com/FernandoRVLopes
+        researchgate: https://www.researchgate.net/profile/Fernando-Lopes-13
+        photo: webp/People-photo-Fernando-Lopes-square.webp
+        bio: |
+            I was a postdoctoral researcher at the Finnish Museum of Natural History (LUOMUS). My research focused on understanding the phylogenetic relationships of extant and extinct species of dung beetles (Coleoptera: Scarabaeinae) from Madagascar and Mascarenes by using genomics and ancient DNA. I was part of a project that aims to reconstruct detailed evolutionary dynamics of the stunning dung beetle diversity in the Malagasy region and the associated mass extinction events likely caused by human activity. My research interests are molecular systematics, population genomics, and phylogeography, with particular emphasis on the methods that account for hybridization. Previously, I was studying how environmental conditions influence marine mammals' population structure and diversification.
+
+      - name: Michele Rossini
+        role: Postdoc
+        email: micros.naturae@gmail.com
+        scholar: https://scholar.google.fi/citations?user=uEEwOpIAAAAJ&hl=en&oi=ao
+        github: https://github.com/merrienthomas
+        orcid: https://orcid.org/0000-0002-0339-5656
+        photo: webp/People-photo-Michele-Rossini-square.webp
+        bio: |
+            I was a postdoctoral researcher at Finnish Museum of Natural History (LUOMUS), where my research interests included alpha-taxonomy, systematics and biogeography of scarab beetles (especially Scarabaeinae dung beetles), but also ecological interactions between beetles and fungi. Over the years, I gained solid knowledge in insect morphology, taxonomy and entomological collections management. My research at LUOMUS aimed at investigating engines responsible for the evolutionary radiation and success of Malagasy dung beetles (Madagascar + Mascarene islands), including the main causes of their extinction on Mascarene Archipelago. Additionally, starting in 2013, I was involved in the taxonomic and systematic study of American *Onthophagus*.
+
+      - name: Thomas Merrien
+        role: PhD Student
+        email: thomas.merrien@helsinki.fi
+        scholar: https://scholar.google.fi/citations?user=uEEwOpIAAAAJ&hl=en&oi=ao
+        github: https://github.com/merrienthomas
+        orcid: https://orcid.org/0000-0002-0339-5656
+        photo: webp/People-photo-Thomas-Merrien-square.webp
+        bio: |
+            I was a PhD student at the Tarasov and Cardoso Labs. My interests were disentangling mechanisms that drive the evolution of species and reconstructing the dynamics of their geographic distribution, traits, and evolutionary rates. I also worked on comparative phylogenetics methods and historical biogeography. In my work, I mostly used mathematical models applied to various fields of biology, genetics, and statistics. My PhD aimed at developing a framework that models the evolution of specis geographic ranges on phylogenetic trees given current range data and geographic landscape. My target taxon was dung beetles (Coleoptera: Scarabaeinae) from Madagascar.
+
+      - name: Giulio Montanaro
+        role: MSc Graduate & Technical Assistant
+        email: giuliomontanaro98@gmail.com
+        twitter: https://twitter.com/_G_Montanaro
+        researchgate: https://www.researchgate.net/profile/Giulio-Montanaro
+        photo: webp/People-photo-Giulio-Montanaro-square.webp
+        bio: |
+            I am a MSc graduate working as a technical assistant at the Finnish Museum of Natural History (Luomus). My master's thesis, completed at Luomus under the supervision of S. Tarasov, focused on the taxonomy of dung beetles endemic to the Eastern Arc Mountains of Tanzania. My research interests encompass all aspects of dung beetle diversity and evolution, which I study by integrating morphomolecular taxonomy and systematics, phylogenetics and cutting-edge taxonomic tools, specifically Phenoscript semantic language. My current research deals with building a new tribal classification for Afro-Eurasian scarabaeine genera, implementing Phenoscript in the descriptions of several new species (especially from the megagenus Onthophagus), and documenting the dung beetle diversity of Tanzanian rainforests. Besides research, I enjoy listening to music, foraging for mushrooms and herbs, and planning my next field trip to Africa.
+
+      - name: Marcely Valois
+        role: Visiting PhD Student
+        email: marcelycvalois@gmail.com
+        photo: webp/People-photo-Marcely-Valois-square.webp
+        bio: |
+            Marcely visited LUOMUS during 22 Aug 2019 - 29 Jan 2020. She was a PhD student at Universidade Federal do Para (Brazil). Her project focused on reconstructing the phylogeny of the diverse Neotropical dung beetle tribe Dichotomiini.
+
+      - name: Sheila Cassenote Ferreira
+        role: Visiting PhD Student
+        email: cassenottesheila@gmail.com
+        photo: webp/People-photo-Sheila-Cassenote-Ferreira-square.webp
+        bio: |
+            Sheila visited LUOMUS during 4 Sep 2019 - 29 Feb 2020. She was doing her PhD at the Universidade Federal de Santa Maria (UFSM) (Brazil). Her PhD project was entitled “Taxonomy, Biogeography and Phylogeny of Neotropical Dichotomius from carbonarius species group.”

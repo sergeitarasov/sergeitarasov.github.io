@@ -1,0 +1,924 @@
+/*** General styles ***/
+
+	:root {
+		/* color-scheme: light dark; /* Tells the browser the site supports both modes */
+		color-scheme: light dark;
+		--font-size-1: 3em;
+		--font-size-12: 2.6em;
+		--font-size-2: 2.2em;
+		--font-size-23: 1.95em;
+		--font-size-3: 1.7em;
+		--font-size-34: 1.4em;
+		--font-size-4: 1.2em;
+		--font-size-5: 1em;
+		--font-size-6: 0.8em;
+		--header-init-height: 90px; /* Initial height before height reduction */
+		--header-final-height: 50px; /* Shortest header height after scrolling */
+		--black-in-light: light-dark(black, white);
+		--white-in-light: light-dark(white, black);
+		
+		--max-content-width: 1200px;
+		--med-content-width: 900px;
+
+		--bg-light-lightest: #f5f8f8;
+		--bg-light-lighter: #e2e9e9;
+		--bg-light-darker: #d7dede;
+		--bg-dark-lighter: #353d3d; /* <-- Slight green hue; No color hue / grayscale --> #545454; */
+		--bg-dark-darker: #212828; /* <-- Slight green hue; No color hue / grayscale --> #2d2d2d; */
+
+		--accent-color-1: #174068; /* Darkest */
+		--accent-color-2: #0c5096;
+		--accent-color-3: #2272c3;
+		--accent-color-4: #518dc9; 
+		--accent-color-5: #7fbbf7;
+		--accent-color-6: #b1d8ff; /* Lightest */
+		
+		--accent-color-a: #a75300; /* Darkest */
+		--accent-color-b: #f39332; /* Lightest */
+		
+		--text-button: var(--bg-light-lightest);
+		--bg-lighter: light-dark(var(--bg-light-lightest), var(--bg-dark-lighter));
+		--link-visited: light-dark(var(--accent-color-3), var(--accent-color-4));
+		--link-default: light-dark(var(--accent-color-2), var(--accent-color-5));
+		--link-hover: light-dark(var(--accent-color-1), var(--accent-color-6));
+		--button-default: light-dark(var(--accent-color-3), var(--accent-color-3));
+		--button-hover: light-dark(var(--accent-color-2), var(--accent-color-4));
+		--text-gray: light-dark(var(--bg-dark-lighter), var(--bg-light-darker));			/* For links without active hovering */
+		--text-normal: light-dark(var(--bg-dark-darker), var(--bg-light-lightest));			/* For general text, links while hovering */
+		--text-selection: light-dark(var(--accent-color-b), var(--accent-color-a));
+	}
+
+	@font-face {
+		font-family: 'Inter';
+		src: url('../fonts/InterVariable.woff2') format('woff2');
+		font-weight: 100 900;
+		font-style: normal;
+		font-display: swap;
+	}
+	@font-face {
+		font-family: 'Open Sans Variable';
+		font-style: normal;
+		font-display: swap;
+		font-weight: 300 800;
+		src: url('../fonts/open-sans_5.3.0_latin-wght-normal.woff2') format(woff2) tech(variations);
+		unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+	}
+
+	body {
+		/* Hide body content on first load of page to prevent flashing of incompletely 
+		styled content until javascript DOM changes are completed */
+		display: none !important;
+		background-color: var(--bg-lighter);
+		margin: 0px; 								/* Override browser of 8px */
+		color: var(--text-normal);
+		font-family: "Open Sans Variable", sans-serif;
+	}
+	main {
+		/* margin-top: var(--header-init-height); 		/* Offset the page content so it doesn't hide behind the fixed header */
+		/*
+		padding: 20px;
+		max-width: 1200px;
+		*/
+	}
+	.display-flex {
+		display: flex;
+	}
+	.flex-column {
+		display: flex;
+		flex-direction: column;
+	}
+	.flex-item-url { /* Prevents URLs in flex containers from expanding width to end of URL */
+		/* Crucial: Prevents the URL from scaling beyond its parent boundary */
+		min-width: 0; 
+
+		/* Forces the browser to break the URL text at any character */
+		overflow-wrap: anywhere; 
+		word-break: break-all; 
+	}
+
+/*** Keyframes for animations ***/
+	@keyframes shrink-height { to { 
+		height: var(--header-final-height);
+	} }
+	@keyframes shrink-font-2 { to { font-size: var(--font-size-2); } }
+	@keyframes shrink-font-3 { to { font-size: var(--font-size-3); } }
+	@keyframes shrink-font-4 { to { font-size: var(--font-size-4); } }
+	@keyframes shrink-font-5 { to { font-size: var(--font-size-5); } }
+
+	@keyframes change-header-img-width { to { width: 45px } }
+	
+	/* @keyframes change-header-padding-top { to { padding-top: 18px; } } */
+
+/*** Style for font/text ***/
+	h1 { font-size: var(--font-size-1); }
+	h2 { font-size: var(--font-size-2); }
+	h3 { font-size: var(--font-size-3); }
+	h4 { font-size: var(--font-size-4); }
+	p { font-size: var(--font-size-5); }
+	h1, h2, h3, h4, h5 {
+		font-family: "Inter", sans-serif;
+	}
+
+	.size-3 { 
+		line-height: 1.8em;
+		font-size: var(--font-size-3);
+	}
+	.size-4 {
+		line-height: 1.5em;
+		font-size: var(--font-size-4);
+	}
+	
+	/* Link text colors */
+	.content:not(.trips) a:not(.button) { color: var(--link-default); }
+	.content:not(.trips) a:not(.button):visited { color: var(--link-visited); }
+	.content:not(.trips) a:not(.button):hover { color: var(--link-hover); }
+	
+	/* Color of highlight background when selecting text */
+	:not(.content) ::selection {
+		background-color: var(--accent-color-a);
+	}
+	.content ::selection {
+		background-color: var(--text-selection);
+	}
+
+/*** Style for header and footer ***/
+	nav {
+		font-size: var(--font-size-5);
+	}
+
+	/* Create a line beneath the link (underline) that is hidden except for on hover*/
+		header a:not(.logo)::after, footer a:not(.icon)::after {
+			content: '';
+			position: absolute;
+			width: 100%;
+			transform: scaleX(0);
+			height: 2px;
+			bottom: 0;
+			left: 0;
+			background-color: var(--accent-color-5); /* var(--link-hover); */
+			transform-origin: bottom left;
+			transition: transform 0.25s ease-out;
+		}
+
+		/* Expand the line to full width on hover */
+		header a:hover::after, footer a:not(.icon):hover::after {
+			transform: scaleX(1);
+		}
+
+	/* Replace horizontal nav bar with hamburger menu on mobile
+		/* Hide the toggle tools on desktop */
+		.nav-toggle { display: none; } 
+		.nav-toggle-label { display: none; }
+
+
+/*** Style for header ***/
+	/* Style for header element */
+	header.site-header {
+		position: fixed;							/* Keeps the header stuck to the top */
+		top: 0;
+		left: 0;
+		width: calc(100% - 40px);					/* - #px prevents element from continuing off page, make sure to set to 2x lateral padding */
+		height: var(--header-init-height); 			
+		padding: 0px 20px 0px 20px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;				/* Puts first child element at left, last at right, with equal spacing in between all */
+		/* box-shadow: 0 2px 5px rgba(0,0,0,0.1); */
+		z-index: 1000;
+		background-color: var(--bg-dark-darker); /* var(--bg-darker); */
+		color: var(--bg-light-lightest); /* var(--text-normal); */
+	}
+
+	header .logo {
+		/*
+		background-color:green;
+		border: solid 1px black;
+		*/
+	}
+
+	header a {
+		position: relative;
+		text-decoration: none;
+		color: var(--bg-light-darker); /* var(--text-gray); */
+	}
+
+	header a:not(.logo):hover {
+		color: var(--accent-color-5); /* var(--bg-light-lightest) var(--text-normal); */
+	}
+	header a.logo:hover {
+		color: var(--bg-light-lightest);
+	}
+
+	/* Style for navigation */
+	nav ul {
+		/*
+		background-color:red;
+		border: solid 1px black;
+		*/
+		display: flex;      /* Aligns list items in a row */
+		list-style: none;   /* Removes default bullet points */
+		padding: 0;         /* Removes default browser indentation */
+		margin: 0;
+	}
+
+	header nav ul {
+		gap: 15px;			/* Adds clean spacing between items */
+	}
+
+	/* Link keyframes - shrink header height and font size on scroll */
+		header.site-header {
+			/* Link the animation to the document scroll position */
+			animation: shrink-height auto linear both; /*, change-header-padding-top auto linear both; */
+			animation-timeline: scroll(block root);
+			animation-range: 0px 150px; /* The animation runs during the first 150px of scroll */
+		}
+
+		/* Shrink font sizes with scroll */
+		header div.logo {
+			transition: font-size 0.1s linear;
+			animation: shrink-font-4 auto linear both;
+			animation-timeline: scroll(block root);
+			animation-range: 0px 150px;
+			display: flex;
+			align-items: center;
+		}
+		header nav {
+			font-size: var(--font-size-4);
+			transition: font-size 0.1s linear;
+			animation: shrink-font-5 auto linear both;
+			animation-timeline: scroll(block root);
+			animation-range: 0px 150px;
+		}
+		header div.logo img {
+			margin-right: 5px;
+			animation: change-header-img-width auto linear both;
+			animation-timeline: scroll(block root);
+			animation-range: 0px 150px; /* The animation runs during the first 150px of scroll */
+		}
+
+/*** Style for footer ***/
+	footer {
+		width: calc(100% - 40px);					/* - #px prevents element from continuing off page, make sure to set to 2x lateral padding */
+		padding: 0px 20px;
+		background-color: var(--bg-dark-darker); /* var(--bg-darker); */
+		color: var(--bg-light-lightest); /* var(--text-normal); */
+		box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+	}
+
+	footer a {
+		position: relative;
+		text-decoration: none;
+		color: var(--accent-color-4); /* var(--link-default); */
+	}
+
+	footer a:hover {
+		color: var(--accent-color-5); /* var(--link-hover); */
+	}
+
+	footer span {
+		line-height: 1.3em;
+		font-size: var(--font-size-5);
+	}
+
+	footer div.top-row{
+		display: flex;
+		justify-content: space-between;				/* Puts first child element at left, last at right, with equal spacing in between all */
+		padding: 0px 20px 10px 0px;
+	}
+	
+	footer div.top-row > div {
+		flex: 0 0 33%;
+	}
+
+	footer div.top-row div.middle {
+		padding: 0 20px;
+		display: grid;
+		align-items: start;
+		justify-items: center;
+	}
+
+	footer div.bottom-row{
+		margin: 10px 0px 0px 0px;
+		padding: 15px 0px 10px 0px;
+		border-top: 1px solid var(--bg-light-lighter);
+		text-align: center; 						/* Centers children elements vertically */
+		gap: 5px;									/* Adds vertical spacing between items */
+	}
+
+	footer nav ul {
+		flex-direction: column;
+		gap: 10px;				/* Adds spacing between items */
+	}
+
+/*** Style for sections ***/
+	section {
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+
+	.wide-content-width {
+		max-width: var(--max-content-width);
+	}
+
+	.narrow-content-width {
+		max-width: var(--med-content-width);
+	}
+
+	section > div.container, section > article {
+		align-items: center; /* Centers child elements vertically */
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	section.page-title > div.container {
+		margin-top: 50px;
+		margin-bottom: 50px;
+	}
+
+	section.content:not(.index) > div.container, section > article {
+		margin-top: 100px;
+	}
+	
+	section.content:not(.index) > div.container {
+		margin-bottom: 125px;
+	}
+
+	section.content.index > div.container {
+		margin-top: 50px;
+		margin-bottom: 60px;
+	}
+
+	/*** Style for page title section ***/
+		section.page-title {
+			background-color: #000000; /* To match background color of feature image */
+			color: var(--bg-light-lightest);
+			padding-top: calc(var(--header-init-height) + 70px);	/* Offset the page content so it doesn't hide behind the fixed header */
+			padding-bottom: 20px;
+		}
+		section.page-title > div.container {
+			display: flex;
+		}
+		section.page-title.heading {
+			align-items: center; 		/* Centers child elements orthogonal to the main axis */
+			justify-content: center;	/* Centers child elements along the main axis */
+			height: 290px;
+			text-align: center;
+		}
+		section.page-title.heading.index { /* Override for homepage */
+			align-items: flex-start;
+			justify-content: center;
+			height: 440px;
+			text-align: left;
+			margin-bottom: 75px;
+		}
+		section.page-title.heading.index > div.page-title.heading.index {
+			max-width: 600px;
+		}
+		section.page-title.heading span.subheading {
+			font-size: var(--font-size-3);
+		}
+		section.page-title.index h1 {
+			margin-bottom: 20px;
+		}
+		section.page-title.index h2.underheading {
+			margin: 0px 0px 20px 0px;
+			font-style: italic;
+			font-size: var(--font-size-23);
+			font-weight: 300;
+		}
+		section.page-title.heading.index span.subheading {
+			max-width: 600px;
+		}
+		section.page-title figcaption {
+			margin-top: auto;
+			margin-left: auto;
+		}
+		
+/*** Flex/Column styles ***/
+	.align-baseline {
+		align-items: baseline;
+	}
+	.align-center {
+		align-items: center;
+	}
+	.col-2, .col-3, .col-2-stack, .col-3-stack, .col-2-stack > div.container {
+		display: flex;
+	}
+
+	/*** Style for 2 columns that stack on mobile - home page ***/
+		.index.col-2-stack:not(:first-child):not(:last-child) {
+			padding-top: 20px;
+			padding-bottom: 20px;
+		}
+		.index.col-2-stack:last-child {
+			padding-top: 20px;
+			padding-bottom: 120px;
+		}
+		.index.col-2-stack > div.container > div {
+			flex: 1; 					/* Makes immediate child divs equal width */
+		}
+		.index.col-2-stack > div.container div.text {
+			margin: 14px 25px;
+		}
+		.index.col-2-stack > div.container div.img {
+			display: flex;
+			justify-content: center;	/* Centers child elements along the main axis */
+		}
+		.index.col-2-stack > div.container div.link {
+			margin: 30px 0px 0px 0px;
+			text-align: center;
+		}
+
+
+	/*** Style for 2 columns that stack on mobile - people page ***/
+		.people.col-2-stack {
+			padding: 20px 0px;
+		}
+		.people.col-2-stack div.right-col {
+			padding: 20px;
+		}
+		.people.col-2-stack div.left-col {
+			padding: 3em 20px 20px 20px;
+			text-align: right;
+			flex: 0 0 250px;
+		}
+		.people.col-2-stack h3 {
+			margin-right: 10px;
+		}
+		.people .role {
+			font-size: var(--font-size-3);
+			border-left: 2px solid var(--text-normal);
+			padding-left: 10px;
+		}
+		.people .name-role {
+			margin-bottom: -20px;
+		}
+		.people .bio p {
+			margin-top: 0px;
+		}
+		.people .icons {
+			padding: 5px 0;
+		}
+
+	/*** Style for 3 columns - publication page ***/
+		.publications .col-3 {
+			padding: 10px 0px;
+		}
+		.projects .col-3 {
+			padding: 5px 0px;
+		}
+		.publication.col-3 .number {
+			padding: 0px 5px;
+		}
+		.publication.col-3 .icon {
+			min-width: 24px;
+		}
+
+	/*** Style for flex on software and projects page ***/
+		div.project-entry:not(:last-child), div.software-entry:not(:last-child) {
+			padding-bottom: 125px;
+		}
+		.projects .col-2-stack div.description, .software .col-2-stack div.description {
+			padding: 0px 10px 0px 0px;
+		}
+		.projects .col-2-stack div.image, .software .col-2-stack div.image {
+			flex: 0 0 50%;
+			padding: 16px 0px 30px 10px;
+		}
+		.projects .description-image, .software .description-image {
+			margin-bottom: 25px;
+		}
+
+	/*** Style for flex on software page ***/
+		.software .col-2 .logo {
+			padding-left: 10px;
+		}
+		.software .name-logo {
+			margin-bottom: -10px;
+		}
+		div.software.container h3 {
+			margin-top: 0px;
+			font-style: italic;
+		}
+		.software div.quick-info p {
+			margin: 8px 0px;
+		}
+
+	/*** Style for flex on trips page ***/
+		div.container.trips {
+			align-content: center;
+			margin-bottom: 75px !important;
+		}
+		div.container.trips > a {
+			text-decoration: none;
+			color: var(--text-gray);
+		}
+		.trips.col-2-stack {
+			box-shadow: 3px 3px 12px 1px rgba(0, 0, 0, 0.25);
+			transition: transform 0.3s ease; 
+			padding-right: 20px;
+			margin-bottom: 75px;
+		}
+		.trips.col-2-stack .right-col {
+			justify-content: center;
+		}
+		.trips.col-2-stack h2 {
+			margin-bottom: 10px;
+		}
+		.trips.col-2-stack img {
+			margin: 0px 25px 0px 0px;
+		}
+		.trips.col-2-stack:hover {
+			cursor: pointer;
+			transform: scale(1.05); 
+		}
+
+/*** Style for images and icons ***/
+/* Page-title images width: 2048 px */
+
+	section.page-title.trip {
+		background: radial-gradient(circle, rgba(0, 0, 0, .4) 30%, rgba(0, 0, 0, 0) 100%),
+			url('../../webp/Pagetitle-Phanaeus-furiosus-CC-BY-NC-Ricardo-Arredondo-T-inaturalist-observations-88457335-2048x612.webp');
+		background-position: 0% 50px;
+		background-repeat: no-repeat; 	/* Stop the image from repeating like a tile grid */
+		background-attachment: fixed;
+		background-size: auto 440px;
+	}
+
+	.people-profile-photo {
+		width: 205px;
+		height: 205px;
+		border-radius: 12px;
+	}
+
+	img.icon, svg.icon {
+		width: 24px;
+		height: 24px;
+		opacity: 80%;
+	}
+
+	img.icon:hover, svg.icon:hover {
+		opacity: 100%;
+	}
+	
+	footer svg.icon .black-in-light {
+		fill: white !important;
+	}
+	footer svg.icon .white-in-light {
+		fill: black !important;
+	}
+	.content svg.icon .black-in-light {
+		fill: var(--black-in-light) !important;
+	}
+	.content svg.icon .white-in-light {
+		fill: var(--white-in-light) !important;
+	}
+	.people svg.icon, .people img.icon {
+		padding-left: 5px;
+	}
+
+	div.icon-text-container {
+		display: inline-flex;  /* Keeps the container inline with surrounding text */
+		align-items: center;   /* Centers items vertically */
+		gap: 8px;              /* Adds spacing between the icon and text */
+		margin-top: 10px;
+	}
+
+	div.icon-text-container a {
+		padding-top: 5px;
+	}
+	img.index-feature-title {
+		width: 100%;             /* Fills the width of the parent flex item */
+		max-width: 100%;         /* Prevents the image from overflowing */
+		object-fit: cover;       /* Crops the image to fit without stretching */
+	}
+	img.index-feature-content, img.project-feature, img.software-feature {
+		width: 100%;             /* Fills the width of the parent flex item */
+		height: 100%;            /* Fills the height of the parent flex item */
+		max-width: 100%;         /* Prevents the image from overflowing */
+		object-fit: cover;       /* Crops the image to fit without stretching */
+		box-shadow: 3px 3px 12px 1px rgba(0, 0, 0, 0.25);
+	}
+	article.trip img, div.container.facts-dung-beetles img {
+		margin: 15px auto;
+		max-width: 100%;         /* Prevents the image from overflowing */
+		display: block;
+		box-shadow: 3px 3px 12px 1px rgba(0, 0, 0, 0.25);
+	}
+	img.index-feature-content, img.project-feature, img.software-feature {
+		border-radius: 12px;
+	}	
+	img.software-logo {
+		max-height: 50px;
+		max-width: 50px;
+	}
+	img.index-feature-title {
+		max-height: 400px;
+	}
+	img.trip-feature {
+		max-width: 350px;
+	}
+	figure {
+		margin: 0px;
+	}
+	figcaption, .figcaption {
+		margin-top: 5px;
+		font-size: var(--font-size-6);
+	}
+	figcaption a {
+		text-decoration: none;
+	}
+	/* figcaption.on-light a { color: var(--text-gray); } */
+	/* figcaption.on-light a:hover { color: var(--text-normal); } */
+
+	figcaption.on-dark a { color: var(--bg-light-darker); }
+	figcaption.on-dark a:hover { color: var(--bg-light-lightest); }
+
+	figcaption.center { text-align: center; }
+	figcaption.right { text-align: right; }
+
+/*** Style for a buttons ***/
+	div.button {
+		display: flex;
+		justify-content: center; /* Centers child elements along the main axis */
+	}
+	
+	a.button {
+		/* Layout & Sizing */
+		display: inline-block;        					/* Allows top/bottom padding and margins */
+		padding: 12px 24px;           					/* Vertical and horizontal spacing inside the button */
+		width: fit-content;
+
+		/* Text Styling */
+		color: var(--text-button);						/* Text color */
+		text-decoration: none;        					/* Removes the default link underline */
+		font-weight: 600;             					/* Bold text emphasis */
+		text-align: center;           					/* Centers text inside fixed widths */
+
+		/* Button Aesthetics */
+		background-color: var(--button-default);		/* Primary button color */
+		border-radius: 4px;           					/* Gives subtle rounded corners */
+		border: 1px solid transparent;					/* Structural placeholder for alignment borders */
+
+		/* Smooth State Transition */
+		transition: background-color 0.2s ease-in-out; 
+	}
+
+	/* Hover State */
+	a.button:hover {
+		background-color: var(--button-hover);		/* Darkens color when cursor hovers over it */
+		cursor: pointer;             					/* Guarantees the interactive hand pointer */
+	}
+
+	/* Active/Click State */
+	a.button:active {
+		transform: scale(0.98);       					/* Adds a physical "pressed" animation click effect */
+	}
+
+	/* For light/dark theme toggle */
+	button.theme-toggle {
+		border: none;
+		background-color: transparent;
+		font-size: 15px;
+	}
+	button.theme-toggle:hover {
+		cursor: pointer;
+		color: var(--text-lighter);
+	}
+
+
+/*** Styles that change with window width ***/
+	@media (min-width: 1470px) { /* Wider than 1470px */
+
+		section.page-title {
+			background-attachment: scroll !important;
+			background-size: cover !important;
+		}
+
+	}
+	@media (min-width: 1001px) { /* Wider than 1000px */
+
+		header div.logo img {
+			width: 90px;
+		}
+		header div.logo {
+			font-size: var(--font-size-2);
+		}
+		h4, .size-4 { font-size: var(--font-size-34); }
+		.index.col-2-stack div.right-col {
+			padding-left: 40px;
+		}
+		section.page-title.index {
+			padding-left: 23%;
+			text-align: center !important;
+		}
+	}
+	@media (max-width: 1000px) { /* Less than 1000px */
+
+		h1 { font-size: var(--font-size-2); }
+		h2 { font-size: var(--font-size-3); }
+		h3, .size-3 { font-size: var(--font-size-4); }
+		h4, .size-4 { font-size: var(--font-size-5); }
+
+		.page-title.heading.index h1 { font-size: var(--font-size-12); }
+
+		section.page-title.heading.index { /* Override for homepage */
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+		}
+
+	}
+	@media (min-width: 886px) and (max-width: 1000px) { /* Wider than tablet but still narrower than full desktop */
+
+		header div.logo img {
+			width: 75px;
+		}
+		header div.logo {
+			font-size: var(--font-size-3);
+		}
+		header nav {
+			font-size: var(--font-size-5);
+		}
+
+	}
+	@media (min-width: 769px) and (max-width: 885px) { /* Wider than tablet but still narrower than full desktop */
+		
+		header div.logo img {
+			width: 55px;
+		}
+		header div.logo {
+			font-size: var(--font-size-4);
+		}
+		header nav {
+			font-size: var(--font-size-5);
+		}
+		header nav ul {
+			gap: 10px;
+		}
+
+	}
+	@media (max-width: 768px) { /* Tablet width or narrower (tablet and mobile) */
+
+		section.index {
+			padding-left: 8%;
+			padding-right: 8%;
+		}
+		
+		section:not(.index) {
+			padding-left: 10%;
+			padding-right: 10%;
+		}
+
+		.index.col-2-stack > div.container div.text {
+			text-align:center;
+		}
+		.index.col-2-stack > div.container div.link {
+			margin-top: 50px; /* Increase bc of figure caption */
+		}
+
+		.narrow-order-to-0 { order: 0; }
+		.narrow-order-to-1 { order: 1; }
+		.narrow-order-to-2 { order: 2; }
+		.remove-on-narrow { display: contents; }
+
+		figcaption { text-align: center !important; }
+		section.page-title figcaption { margin-right: auto; }
+
+		section.page-title.heading span.subheading { font-size: var(--font-size-4);	}
+		.page-title.heading.index h1 { font-size: var(--font-size-2); }
+		section.page-title.index h2.underheading { font-size: var(--font-size-34); }
+
+		/* Columns that stack on mobile */
+			.col-2-stack, .col-3-stack, .col-2-stack > div.container {
+				flex-direction: column;
+				align-items: center;		/* Centers child elements along vertical axis when stacked */
+			}
+			.people.col-2-stack {
+				padding-bottom: 50px;
+			}
+			.people.col-2-stack h3 {
+				margin: 0px;
+			}
+			.people .role {
+				font-size: var(--font-size-4);
+				border-left: 0px;
+				padding-left: 0px;
+			}
+			.software div.name-logo {
+				justify-content: center;
+			}
+			.people .bio, .projects div.project-entry h2.name, .projects div.project-entry h3.short-description, .software h3.short-description {
+				text-align: center;
+			}
+			footer .col-3-stack {
+				padding: 0px 0px 10px 0px !important;
+				text-align: center;
+			}
+
+			.trips.col-2-stack {
+				width: 350px;
+				padding-right: 0px;
+				text-align: center;
+			}
+			.trips.col-2-stack .right-col {
+				padding: 30px 0px;
+			}
+			.trips.col-2-stack h2 {
+				margin: 0px 10px 10px 10px;
+			}
+			.trips.col-2-stack p {
+				margin: 0px 20px 20px 20px;
+			}
+			.trips.col-2-stack img {
+				margin: 0px 0px 25px 0px;
+			}
+
+		/* Mobile header */
+			/* Show the hamburger menu icon */
+			.nav-toggle-label {
+				display: block;
+				cursor: pointer;
+				height: 21px;
+			}
+
+			/* Create the 3-line hamburger bar pattern */
+			.nav-toggle-label span, .nav-toggle-label span::before, .nav-toggle-label span::after {
+				display: block;
+				background: var(--bg-light-darker);
+				height: 2px;
+				width: 25px;
+				position: relative;
+			}
+			.nav-toggle-label span::before { content: ''; top: 10px; }
+			.nav-toggle-label span::after { content: ''; top: 18px; }
+
+			/* Collapse the navigation container off-screen or out of sight */
+			header nav {
+				background-color: var(--bg-dark-darker); /* var(--bg-darker); */
+				font-size: var(--font-size-4);
+				transition: font-size 0.1s linear;
+				animation: shrink-font-5 auto linear both;
+				animation-timeline: scroll(block root);
+				animation-range: 0px 150px;
+				position: absolute;
+				padding-bottom: 20px;
+				top: 100%;
+				left: 0;
+				width: 100%;
+				transform: scale(1, 0); /* Shrink it down vertically */
+				transform-origin: top;
+				transition: transform 400ms ease-in-out; /* Smooth slide-down animation */
+			}
+
+			header nav ul {
+				flex-direction: column; /* Stack options vertically */
+				gap: 25px;
+			}
+
+			header nav li {
+				margin: 0px auto;
+				text-align: center;
+			}
+
+			header nav a {
+				display: block;
+			}
+
+			/* When the checkbox is checked, expand the menu */
+			.nav-toggle:checked ~ nav {
+				transform: scale(1, 1);
+			}
+
+			/* Turn off underline on hover for links - no hover on mobile and it flashes the color when expanding the menu */
+			header a:not(.logo)::after, footer a:not(.icon)::after {
+				width: 0%;
+			}
+	}
+	@media (min-width: 400px) and (max-width: 768px) {
+		
+		header div.logo {
+			font-size: var(--font-size-3);
+		}
+		header div.logo img {
+			width: 90px;
+		}
+		h4, .size-4 { font-size: var(--font-size-4); }
+
+	}
+	@media (max-width: 399px) {
+		header div.logo {
+			font-size: var(--font-size-4);
+		}
+		header div.logo img {
+			width: 80px;
+		}
+	}
+	@media (max-width: 320px) {
+		header div.logo {
+			font-size: var(--font-size-5);
+		}
+		header div.logo img {
+			width: 60px;
+		}
+	}

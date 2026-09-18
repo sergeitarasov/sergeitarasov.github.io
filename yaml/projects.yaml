@@ -1,0 +1,183 @@
+---
+# To add publications to a project, copy and paste the corresponding bibtex entry from the publications.bib file
+
+projects:
+  - name: |
+        Dung Beetle Evolution
+    short_description: Discovering the evolutionary history of a diverse and ecologically vital group
+    image: webp/Projects-Scarabaeus-galenus-CC-BY-NC-Andre-Harmse-inaturalist-observations-143277259-796x683.webp
+    image_caption: <em>Scarabaeus galenus</em> CC-BY-NC Andre Harmse
+    image_caption_link: https://www.inaturalist.org/observations/143277259
+    image_caption_link_title: Go to observation on iNaturalist
+    description: |
+        Dung beetles (Coleoptera: Scarabaeinae) are remarkable both for their diversity and the ecosystem services that they perform. There are over 6,000 species of dung beetles, more than the approximately 5,500 species of living mammals. And their diversity isn't just about numbers: some groups of dung beetles have evolved extravagant and varied head horns, making them a model system in developmental biology. Additionally, our planet is dependent on the ecosystem services these charismatic insects provide, such as: nutrient cycling, enhancement of plant growth, seed dispersal, parasite suppression, fly control, trophic regulation and pollination ([Nichols et al., 2008](https://doi.org/10.1016/j.biocon.2008.04.011)).
+        
+        Yet, at least 30% of dung beetle species are undescribed and for many species we do not know how they evolved or how they are related to each other.Our lab is blending phenomics, genomics, biosystematics, and novel phylogenetic methods to reconstruct the evolutionary history among dung beetles.Discovering the origins of dung beetles and how they are related will help us to better understand how they maintain the health of Earth's ecosystems, how animal bodies are patterned and develop, and how Earth's stunning diversity of life forms have evolved.
+        
+    publications: |
+        @UNPUBLISHED{Losacco2025-ml,
+          title    = "A review of Sisyphini Dung Beetles (Coleoptera: Scarabaeinae)
+                      endemic to Mauritius: insights from subfossil evidence and
+                      phylogenetic analysis",
+          author   = "Losacco, Federica and Lopes, Fernando and Rossini, Michele and
+                      Porch, Nick and Krell, Frank Thorsten and Motala, Saoud and
+                      Daniel, Gimo and Tarasov, Sergei",
+          doi      = "10.1101/2025.05.16.654365",
+          journal  = "bioRxiv",
+          year     =  2025
+        }
+        @ARTICLE{Lopes2024-sq,
+          title    = "From museum drawer to tree: Historical {DNA} phylogenomics
+                      clarifies the systematics of rare dung beetles (Coleoptera:
+                      Scarabaeinae) from museum collections",
+          author   = "Lopes, Fernando and Gunter, Nicole and Gillett, Conrad P D T and
+                      Montanaro, Giulio and Rossini, Michele and Losacco, Federica and
+                      Daniel, Gimo M and Straube, Nicolas and Tarasov, Sergei",
+          doi        = "10.1371/journal.pone.0309596",
+          journal  = "PLoS One",
+          volume   =  19,
+          number   =  12,
+          pages    = "e0309596",
+          month    =  dec,
+          year     =  2024,
+          language = "en"
+        }
+        @ARTICLE{Montanaro2024-zg,
+          title     = "Microallopatric speciation in the relict dung beetle genus
+                       \textit{Grebennikovius} (Coleoptera: Scarabaeidae) in the
+                       Eastern Arc Mountains",
+          author    = "Montanaro, Giulio and Grebennikov, Vasily V and Rossini, Michele
+                       and Grapputo, Alessandro and Ruzzier, Enrico and Tarasov, Sergei",
+          doi        = "10.1093/isd/ixae004",
+          journal   = "Insect Syst. Divers.",
+          publisher = "Oxford University Press (OUP)",
+          volume    =  8,
+          number    =  2,
+          month     =  mar,
+          year      =  2024,
+          copyright = "https://creativecommons.org/licenses/by/4.0/",
+          language  = "en"
+        }
+        @ARTICLE{Lopes2023-dw,
+          title     = "Metagenomics reveals that dung beetles (Coleoptera:
+                       Scarabaeinae) broadly feed on reptile dung. Did they also feed
+                       on that of dinosaurs?",
+          author    = "Lopes, Fernando and Rossini, Michele and Losacco, Federica and
+                       Montanaro, Giulio and Gunter, Nicole and Tarasov, Sergei",
+          journal   = "Front. Ecol. Evol.",
+          publisher = "Frontiers Media SA",
+          volume    =  11,
+          month     =  mar,
+          year      =  2023,
+          doi	    =  "10.3389/fevo.2023.1132729",
+          copyright = "https://creativecommons.org/licenses/by/4.0/"
+        }
+        @ARTICLE{Rossini2022-gg,
+          title     = "Paleogene forest fragmentation and out‐of‐Africa dispersal
+                       explain radiation of the Paleotropical dung beetle tribe
+                       Epactoidini trib. nov. (Coleoptera: Scarabaeinae)",
+          author    = "Rossini, Michele and Grebennikov, Vasily and Merrien, Thomas and
+                       Miraldo, Andreia and Viljanen, Heidi and Tarasov, Sergei",
+          journal   = "Syst. Entomol.",
+          publisher = "Wiley",
+          volume    =  47,
+          number    =  4,
+          pages     = "655--667",
+          month     =  oct,
+          year      =  2022,
+          doi = "10.1111/syen.12564",
+          copyright = "http://creativecommons.org/licenses/by-nc/4.0/",
+          language  = "en"
+        }
+
+  - name: |
+        Ontology-informed phylogenetic methods
+    short_description: Making traits machine readable for evolutionary analysis
+    image: webp/Projects-Oxysternon-conspicillatum-CC-BY-desertnaturalist-inaturalist.org-observations-291846884-1024x914.webp
+    image_caption: Rhinoceros Dung Beetle (<em>Oxysternon conspicillatum</em>) CC-BY Desertnaturalist
+    image_caption_link: https://www.inaturalist.org/observations/291846884
+    image_caption_link_title: Go to observation on iNaturalist
+    description: |
+        If you take the time to observe any organism, you'll find a wealth of details.These observable details are called "traits" or "characters" and they are used across biology to define and describe species, to recognize, define, and diagnose pathological conditions, and to evaluate how organisms develop, evolve, and interact with their environment.
+        
+        The challenge with using traits in biology is that we describe them using everyday language (i.e., natural language). However, for computers to use these phenotypic data, they need to be in a format that is "machine readable" with standardized formats for hierarchical relationships, shape descriptions, size measurements, etc. This standardization also makes it possible to compare multiple species, each with their own unique set of traits.The science of standardizing and categorizing these descriptions is ontology.
+
+        Our lab is combining statistical modeling and ontology-based tools to create new phylogenetic methods for reconstructing the evolution of traits. Although we largely use dung beetles as a test case for these methods, they are applicable to any group of organisms. These methods allow us to convert the vast wealth of descriptions available from text into data for reconstructing how and why organisms on Earth have evolved such a great diversity of shapes, sizes, and structures.
+
+    publications: |
+        @ARTICLE{Montanaro2024-ul,
+          title     = "Computable species descriptions and nanopublications: applying
+                       ontology-based technologies to dung beetles (Coleoptera,
+                       Scarabaeinae)",
+          author    = "Montanaro, Giulio and Balhoff, James P and Gir{\'o}n, Jennifer C
+                       and S{\"o}derholm, Max and Tarasov, Sergei",
+          doi        = "10.3897/BDJ.12.e121562",
+          journal   = "Biodivers. Data J.",
+          publisher = "Pensoft Publishers",
+          volume    =  12,
+          number    = "e121562",
+          pages     = "e121562",
+          month     =  jun,
+          year      =  2024,
+          keywords  = "Grebennikovius; Phenoscript; characters; microCT; morphology;
+                       phenotypic traits; semantic data; taxonomy",
+          copyright = "http://creativecommons.org/licenses/by/4.0/",
+          language  = "en"
+        }
+        @UNPUBLISHED{Tarasov2022-dk,
+          title     = "The hidden model space of phylogenetic state-dependent
+                       diversification models ({SSEs)}: Congruence, challenges, and
+                       opportunities",
+          author    = "Tarasov, Sergei and Uyeda, Josef",
+          doi        = "10.1101/2022.07.04.498736",
+          journal   = "bioRxiv",
+          year      =  2022,
+          copyright = "http://creativecommons.org/licenses/by/4.0/"
+        }
+        @ARTICLE{Montanaro2024-ht,
+          title    = "Beyond natural language: an ontology-based description of a new
+                      Scarabaeus dung beetle from Madagascar (Coleoptera, Scarabaeinae)",
+          author   = "Montanaro, Giulio and Tarasov, Sergei",
+          doi        = "10.3897/BDJ.12.e134364",
+          journal  = "Biodivers. Data J.",
+          volume   =  12,
+          pages    = "e134364",
+          month    =  oct,
+          year     =  2024,
+          keywords = "FAIR data; Phenoscript; computable phenotypes; dung beetles;
+                      nanopublications; semantic technologies; taxonomy",
+          language = "en"
+        }
+        @ARTICLE{Porto2024-rf,
+          title     = "ontophylo: Reconstructing the evolutionary dynamics of phenomes
+                       using new ontology‐informed phylogenetic methods",
+          author    = "Porto, Diego S and Uyeda, Josef and Mik{\'o}, Istv{\'a}n and
+                       Tarasov, Sergei",
+          doi        = "10.1111/2041-210X.14283",
+          journal   = "Methods Ecol. Evol.",
+          publisher = "Wiley",
+          volume    =  15,
+          number    =  2,
+          pages     = "290--300",
+          month     =  feb,
+          year      =  2024,
+          copyright = "http://creativecommons.org/licenses/by/4.0/",
+          language  = "en"
+        }
+        @ARTICLE{Porto2023-yl,
+          title     = "rphenoscate: An {R} package for semantics‐aware evolutionary
+                       analyses of anatomical traits",
+          author    = "Porto, Diego S and Tarasov, Sergei and Charpentier, Caleb and
+                       Lapp, Hilmar and Balhoff, James P and Vision, Todd J and Dahdul,
+                       Wasila M and Mabee, Paula M and Uyeda, Josef",
+          doi        = "10.1111/2041-210X.14210",
+          journal   = "Methods Ecol. Evol.",
+          publisher = "Wiley",
+          volume    =  14,
+          number    =  10,
+          pages     = "2531--2540",
+          month     =  oct,
+          year      =  2023,
+          copyright = "http://creativecommons.org/licenses/by/4.0/",
+          language  = "en"
+        }

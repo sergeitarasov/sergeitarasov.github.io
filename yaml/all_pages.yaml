@@ -1,0 +1,145 @@
+---
+## List of the pages and their file names/locations on the site
+#
+# For all images, be sure to compress the image as a jpeg and (optionally) convert the image
+#   to webp to further reduce the file size (using for example this tool: https://cloudconvert.com/jpeg-to-webp). 
+#   The smaller the image file sizes, the faster the page loading time.
+#
+# Information for some of the YAML fields below:
+#
+# title_image: Image that appears in the background of the banner at the top of the page 
+#   with the page title. These images must be 2048 pixels wide and 612 pixels high (2048x612).
+
+sitemap:
+
+    # These are first-order pages (the page link appears directly after the domain name)
+
+    first:
+        - title: Home
+          link: index.html
+          subtitle: Blending phenomics, genomics, phylogenetics, and ontology-based tools to uncover the evolutionary processes behind Earth's stunning diversity of life forms.
+          title_image: radial-gradient(circle at left, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0) 100%), url('../jpeg/Pagetitle-beetle-and-tree-of-life-updated-created-with-nano-banana-tarasov-lab-2048x827.jpg')
+          title_image_position_x: 10%
+          title_image_caption: Background image created by The Tarasov Lab using Nano Banana
+          title_image_caption_link: https://gemini.google.com
+
+        - title: Projects
+          link: projects.html
+          subtitle: Ongoing projects in the Tarasov Lab
+          title_image: radial-gradient(circle, rgba(0, 0, 0, .4) 30%, rgba(0, 0, 0, 0) 100%), url('../webp/Pagetitle-Circellium-bacchus-CC-BY-NC-Keith-Barnes-inaturalist-observations-193121985-2048x612.webp')
+          title_image_position_x: 85% # Shift image to the left when window is narrower so that beetle is near center
+          title_image_caption: Cape flightless dung beetle (<em>Circellium bacchus</em>) CC-BY-NC Keith Barnes
+          title_image_caption_link: https://www.inaturalist.org/observations/193121985
+
+        - title: Software
+          link: software.html
+          subtitle: Software out of the Tarasov Lab
+          title_image: radial-gradient(circle, rgba(0, 0, 0, .4) 30%, rgba(0, 0, 0, 0) 100%), url('../webp/Pagetitle-Kheper-nigroaeneus-CC-BY-NC-Christian-Kropf-inaturalist-observations-69453838-2048x612.webp')
+          title_image_position_x: 50%
+          title_image_caption: Diurnal Copper Dung Beetle (<em>Kheper nigroaeneus</em>) CC-BY-NC Christian Kropf
+          title_image_caption_link: https://www.inaturalist.org/observations/69453838
+
+        - title: People
+          link: people.html
+          subtitle: Past and present members of the Tarasov Lab
+          title_image: radial-gradient(circle, rgba(0, 0, 0, .4) 30%, rgba(0, 0, 0, 0) 100%), url('../webp/Pagetitle-field-trip-Madagascar-Fernando-Michele-and-Thomas-2048x612-compressed.webp')
+          title_image_position_x: 50%
+          title_image_caption: Some members of the Tarasov Lab on a collection expedition to Madagascar
+          title_image_caption_link: 
+
+        - title: Publications
+          link: publications.html
+          subtitle: Publications out of the Tarasov Lab
+          title_image: radial-gradient(circle, rgba(0, 0, 0, .4) 30%, rgba(0, 0, 0, 0) 100%), url('../webp/Pagetitle-Proagoderus-watanabei-CC-BY-NC-Otto-Bylén-Claesson-inaturalist-observations-59314076-2048x612.webp')
+          title_image_position_x: 80%
+          title_image_caption: <em>Proagoderus watanabei</em> CC-BY-NC Otto Bylén Claesson</a>
+          title_image_caption_link: https://www.inaturalist.org/observations/59314076
+
+        - title: Attributions
+          link: attributions.html
+          subtitle: Libraries, tools, and other resources used to build this site
+          show_in_nav: false
+          title_image: radial-gradient(circle, rgba(0, 0, 0, .4) 30%, rgba(0, 0, 0, 0) 100%), url('../webp/Pagetitle-Sisyphus-schaefferi-CC-BY-NC-Mobbini-inaturalist-observations-120983421-2048x612.webp')
+          title_image_position_x: 0%
+          title_image_caption: <em>Sisyphus schaefferi</em> CC-BY-NC Mobbini
+          title_image_caption_link: https://www.inaturalist.org/observations/120983421
+
+        - title: Field Trips
+          link: trips.html
+          subtitle: Out of the lab and into the field
+          title_image: radial-gradient(circle, rgba(0, 0, 0, .4) 30%, rgba(0, 0, 0, 0) 100%), url('../jpeg/Pagetitle-Madagascar-field-trip-road-with-trees-cropped-compressed.jpg')
+          title_image_position_x: 50%
+          title_image_caption: Collection expedition to Madagascar by the Tarasov Lab
+          title_image_caption_link: 
+
+        - title: Facts about Dung Beetles
+          show_in_nav: false
+          link: facts-dung-beetles.html
+          subtitle: 12 Striking facts about dung beetles
+          title_image: radial-gradient(circle, rgba(0, 0, 0, .6) 30%, rgba(0, 0, 0, 0) 100%), url('../webp/Pagetitle-Phanaeus-furiosus-CC-BY-NC-Ricardo-Arredondo-T-inaturalist-observations-88457335-2048x612.webp')
+          title_image_position_x: 0%
+          title_image_caption: <em>Phanaeus furiosus</em> CC-BY-NC Ricardo Arredondo T
+          title_image_caption_link: https://www.inaturalist.org/observations/88457335
+
+        # Unused page title background image
+        #  title_image: radial-gradient(circle, rgba(0, 0, 0, .4) 30%, rgba(0, 0, 0, 0) 100%), url('../webp/Pagetitle-Rainbow-Scarab-Phanaeus-vindex-CC-BY-Joe-Brewer-inaturalist.org-observations-76312443-2048x612.webp')
+        #  title_image_position_x: 50%
+        #  title_image_caption: Rainbow scarab (<em>Phanaeus vindex</em>) CC-BY Joe Brewer
+        #  title_image_caption_link: https://www.inaturalist.org/observations/76312443
+
+
+    second:
+
+        # These are second-order pages (pages that are "children" of the first-order pages above)
+        #
+        # Information for some of the YAML fields below:
+        #
+        # title_image: Same as in the "first" section above
+        #
+        # preview_image: Image that appears on the main trips page with a link to each trip. These 
+        #   images must be square and a minimum of 350 pixels tall/wide (e.g., 350x350, 700x700, 1024x1024)
+ 
+        trips:
+            - title: Madagascar 2026
+              name: Madagascar fossil hunt 2026
+              link: trips/madagascar-fossil-hunt-2026.html
+              preview_image: webp/TEMP-image-placeholder-1024x1024.webp
+              blurb: We set out for the Madagascar in search of new fossil species of dung beetles to fill gaps in our understanding of the island's recent ecological history.
+              title_image: radial-gradient(circle, rgba(0, 0, 0, .4) 30%, rgba(0, 0, 0, 0) 100%), url('../webp/Pagetitle-Phanaeus-furiosus-CC-BY-NC-Ricardo-Arredondo-T-inaturalist-observations-88457335-2048x612.webp')
+              title_image_position_x: 0%
+              title_image_caption: <em>Phanaeus furiosus</em> CC-BY-NC Ricardo Arredondo T
+              title_image_caption_link: https://www.inaturalist.org/observations/88457335
+
+            - title: Paris 2025
+              name: Muséum national d'Histoire naturelle 2025 
+              link: trips/museum-national-dHistoire-naturelle-2025.html
+              preview_image: webp/TEMP-image-placeholder-1024x1024.webp
+              blurb: Natural history museums hold a treasure trove of data in the form of specimens collected over the past centuries and the Muséum national d'Histoire naturelle in Paris has one of the world's largest such collections.
+              title_image: radial-gradient(circle, rgba(0, 0, 0, .4) 30%, rgba(0, 0, 0, 0) 100%), url('../webp/Pagetitle-Phanaeus-furiosus-CC-BY-NC-Ricardo-Arredondo-T-inaturalist-observations-88457335-2048x612.webp')
+              title_image_position_x: 0%
+              title_image_caption: <em>Phanaeus furiosus</em> CC-BY-NC Ricardo Arredondo T
+              title_image_caption_link: https://www.inaturalist.org/observations/88457335
+
+# The following are names that should be bolded in any publications list. Names should be 
+#   formatted to match their format in the publications.bib file. So, the list here should 
+#   match all of the variations that are used in the publications.bib file.
+namestobold:
+  - Federica Losacco
+  - Losacco, Federica
+  - Fernando Lopes
+  - Lopes, Fernando
+  - Michele Rossini
+  - Rossini, Michele
+  - Sergei Tarasov
+  - Tarasov, Sergei
+  - Tarasov, Sergei I
+  - Tarasov, Sergey I
+  - Sergey Tarasov
+  - Tarasov, Sergey
+  - Diego Porto
+  - Porto, Diego
+  - Porto, Diego S
+  - Giulio Montanaro
+  - Montanaro, Giulio
+  - Thomas Merrien
+  - Merrien, Thomas

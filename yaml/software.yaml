@@ -1,0 +1,96 @@
+---
+# 
+
+software:
+  - name: ontoFAST
+    short_description: Interactive and semi-automatic annotation of characters with biological ontologies
+    logo: webp/Software-ontoFAST-logo-300x340.webp
+    github: https://github.com/sergeitarasov/ontoFAST
+    image: webp/Software-ontoFAST-Shiny-interface-feature-image-1024x564.webp
+    authors: |
+        **Sergei Tarasov**, István Mikó, Matthew Jon Yoder
+    doc_url: https://github.com/sergeitarasov/ontoFAST/wiki
+    publications: |
+        @ARTICLE{Tarasov2022-es,
+          title     = "{ontoFAST}: An {R} package for interactive and semi‐automatic
+                       annotation of characters with biological ontologies",
+          author    = "Tarasov, Sergei and Mik{\'o}, Istv{\'a}n and Yoder, Matthew Jon",
+          journal   = "Methods Ecol. Evol.",
+          publisher = "Wiley",
+          volume    =  13,
+          number    =  2,
+          pages     = "324--329",
+          month     =  feb,
+          year      =  2022,
+          doi       = "10.1111/2041-210X.13753",
+          copyright = "http://onlinelibrary.wiley.com/termsAndConditions\#vor",
+          language  = "en"
+        }
+    description: |
+        The R package 'ontoFAST' aids in annotating characters and character matrices with biological ontologies. Its interactive interface allows quick and convenient tagging of character statements with necessary ontology terms. The produced annotations can be exported in csv format for downstream analysis. Additionally, OntoFAST provides:
+        1. Functions for constructing simple queries of characters against ontologies, and
+        2. Helper function for exporting and visualising complex ontological hierarchies and their relationships.
+
+  - name: Rphenoscate
+    github: https://github.com/uyedaj/rphenoscate
+    short_description: Semantics for comparative analyses of trait evolution
+    image: webp/Software-rphenoscate-scheme-of-main-components-in-1024x1031.webp
+    authors: |
+        **Diego Porto**, **Sergei Tarasov**, Caleb Charpentier, Hilmar Lapp, Josef Uyeda
+    maintainer: |
+        Josef Uyeda    
+    publications: |
+        @ARTICLE{Porto2023-yl,
+          title     = "rphenoscate: An {R} package for semantics‐aware evolutionary
+                       analyses of anatomical traits",
+          author    = "Porto, Diego S and Tarasov, Sergei and Charpentier, Caleb and
+                       Lapp, Hilmar and Balhoff, James P and Vision, Todd J and Dahdul,
+                       Wasila M and Mabee, Paula M and Uyeda, Josef",
+          doi        = "10.1111/2041-210X.14210",
+          journal   = "Methods Ecol. Evol.",
+          publisher = "Wiley",
+          volume    =  14,
+          number    =  10,
+          pages     = "2531--2540",
+          month     =  oct,
+          year      =  2023,
+          copyright = "http://creativecommons.org/licenses/by/4.0/",
+          language  = "en"
+        }
+    description: |
+        The R package 'Rphenoscate' enables incorporating ontological knowledge in evolutionary analyses and exploring semantic patterns of morphological data. Rphenoscate works with the R package ['rphenoscape'](https://github.com/phenoscape) to assemble synthetic phylogenetic character matrices from semantic phenotypes of morphological data.
+
+  - name: OntoPhylo
+    github: https://github.com/diegosasso/ontophylo
+    short_description: Ontology-informed phylogenetic comparative analyses
+    image: webp/Software-OntoPhylo-estimating-evolutionary-rates-for-morphological-complexes-1024x1024.webp
+    authors: |
+        **Diego Porto** & **Sergei Tarasov**
+    maintainer: |
+        **Diego Porto**
+    publications: |
+        @ARTICLE{Porto2024-rf,
+          title     = "ontophylo: Reconstructing the evolutionary dynamics of phenomes
+                       using new ontology‐informed phylogenetic methods",
+          author    = "Porto, Diego S and Uyeda, Josef and Mik{\'o}, Istv{\'a}n and
+                       Tarasov, Sergei",
+          doi        = "10.1111/2041-210X.14283",
+          journal   = "Methods Ecol. Evol.",
+          publisher = "Wiley",
+          volume    =  15,
+          number    =  2,
+          pages     = "290--300",
+          month     =  feb,
+          year      =  2024,
+          copyright = "http://creativecommons.org/licenses/by/4.0/",
+          language  = "en"
+        }
+    description: |
+        The R package 'ontophylo' enables the reconstruction of phenotypic entities, such as anatomical regions or entire phenomes, composed of characters that are hierarchically and interactively related to one another. It offers three applications:
+        1. Reconstruction of evolutionary rates of amalgamated characters using phylogenetic non-homogeneous Poisson process (pNHPP) that allows modelling rate variation across tree branches and time.
+        2. Reconstruction of morphospace dynamics.
+        3. Visualization of evolutionary rates on vector images of organisms.
+
+
+
+
