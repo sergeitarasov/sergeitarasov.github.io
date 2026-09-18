@@ -65,6 +65,7 @@ sitemap:
           title_image_caption_link: https://www.inaturalist.org/observations/120983421
 
         - title: Field Trips
+          show_in_nav: false
           link: trips.html
           subtitle: Out of the lab and into the field
           title_image: radial-gradient(circle, rgba(0, 0, 0, .4) 30%, rgba(0, 0, 0, 0) 100%), url('../jpeg/Pagetitle-Madagascar-field-trip-road-with-trees-cropped-compressed.jpg')
