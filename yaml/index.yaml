@@ -3,8 +3,7 @@
 
 sections:
   - heading: The evolution of form
-    description: |
-        How does evolution generate the extraordinary diversity of life? We develop new ways to describe species, represent biological traits, and reconstruct evolutionary history—bringing these approaches together to investigate the patterns and processes of macroevolution. Dung beetles are a central study system, but our questions, and the methods we build to answer them, reach across the tree of life.
+    description: How does evolution generate the extraordinary diversity of life? We develop new ways to describe species, represent biological traits, and reconstruct evolutionary history—bringing these approaches together to investigate the patterns and processes of macroevolution. Dung beetles are a central study system, but our questions, and the methods we build to answer them, reach across the tree of life.
     image: webp/Index-tree-in-savanna-with-DNA-for-trunk-created-with-nano-banana-tarasov-lab-612x612.webp
     image_caption: Created by the Tarasov Lab using Nano Banana
     image_caption_link: https://gemini.google.com/
@@ -14,8 +13,7 @@ sections:
     button_link_title: Read more about our lab's projects
 
   - heading: Software for ontology-informed analysis
-    description: |
-        Our methodological work follows two complementary directions. We develop models for studying trait evolution on phylogenetic trees, and ontology-based tools for representing descriptions of organisms and their traits as structured, computable data.
+    description: Our methodological work follows two complementary directions. We develop models for studying trait evolution on phylogenetic trees, and ontology-based tools for representing descriptions of organisms and their traits as structured, computable data.
     image: webp/Index-Onthophagus-illyricus-CC-BY-NC-Romas-Ferenca-inaturalist.org-observations-169733637-612x612.webp
     image_caption: Onthophagus illyricus CC-BY-NC Romas Ferenca
     image_caption_link: https://www.inaturalist.org/observations/169733637
@@ -25,8 +23,7 @@ sections:
     button_link_title: Read more about our lab's software
 
   - heading: Why study dung beetles?
-    description: |
-        Discover what makes dung beetles such fascinating models for studying evolution!
+    description: Discover what makes dung beetles such fascinating models for studying evolution!
     image: jpeg/Index-Madgascar-field-trip-four-lab-members-in-forest-612x612-compressed.jpg
     image_caption: Four members of the Tarasov lab on a collection expedition to Madagascar
     image_caption_link: 
