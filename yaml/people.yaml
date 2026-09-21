@@ -1,13 +1,8 @@
 ---
 # The following are the members of the Tarasov lab, both current and alumni
-# Note that the bio text should be written in Markdown format. For example, words or phrases
-#   can be italicized by *putting them between asterisks*
-# All other values can be entered as is
-# If there is no value for a particular field (e.g., a person does not have a Github site), 
-#   that field and value should be omitted from that person's block (i.e., don't put in 
-#   the field and leave the value empty)
-# To move an individual from the current lab members section to the alumni (or vice versa), 
-#   just cut and paste their data block from one section to the other.
+# Note that the bio text should be written in Markdown format. For example, words or phrases can be italicized by *putting them between asterisks*. All other values can be entered as is
+# If there is no value for a particular field (e.g., a person does not have a Github site), that field and value should be omitted from that person's block (i.e., don't put in the field and leave the value empty)
+# To move an individual from the current lab members section to the alumni (or vice versa), just cut and paste their data block from one section to the other.
 
 labmembers:
     - status: Current Lab Members
