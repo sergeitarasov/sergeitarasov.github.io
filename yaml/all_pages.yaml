@@ -18,6 +18,7 @@ sitemap:
         - title: Home
           link: index.html
           subtitle: Blending phenomics, genomics, phylogenetics, and ontology-based tools to uncover the evolutionary processes behind Earth's stunning diversity of life forms.
+          show_in_nav: true
           title_image: radial-gradient(circle at left, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0) 100%), url('../jpeg/Pagetitle-beetle-and-tree-of-life-updated-created-with-nano-banana-tarasov-lab-2048x827.jpg')
           title_image_position_x: 10%
           title_image_caption: Background image created by The Tarasov Lab using Nano Banana
@@ -26,6 +27,7 @@ sitemap:
         - title: Projects
           link: projects.html
           subtitle: Ongoing projects in the Tarasov Lab
+          show_in_nav: true
           title_image: radial-gradient(circle, rgba(0, 0, 0, .4) 30%, rgba(0, 0, 0, 0) 100%), url('../webp/Pagetitle-Circellium-bacchus-CC-BY-NC-Keith-Barnes-inaturalist-observations-193121985-2048x612.webp')
           title_image_position_x: 85% # Shift image to the left when window is narrower so that beetle is near center
           title_image_caption: Cape flightless dung beetle (<em>Circellium bacchus</em>) CC-BY-NC Keith Barnes
@@ -34,6 +36,7 @@ sitemap:
         - title: Software
           link: software.html
           subtitle: Software out of the Tarasov Lab
+          show_in_nav: true
           title_image: radial-gradient(circle, rgba(0, 0, 0, .4) 30%, rgba(0, 0, 0, 0) 100%), url('../webp/Pagetitle-Kheper-nigroaeneus-CC-BY-NC-Christian-Kropf-inaturalist-observations-69453838-2048x612.webp')
           title_image_position_x: 50%
           title_image_caption: Diurnal Copper Dung Beetle (<em>Kheper nigroaeneus</em>) CC-BY-NC Christian Kropf
@@ -42,6 +45,7 @@ sitemap:
         - title: People
           link: people.html
           subtitle: Past and present members of the Tarasov Lab
+          show_in_nav: true
           title_image: radial-gradient(circle, rgba(0, 0, 0, .4) 30%, rgba(0, 0, 0, 0) 100%), url('../webp/Pagetitle-field-trip-Madagascar-Fernando-Michele-and-Thomas-2048x612-compressed.webp')
           title_image_position_x: 50%
           title_image_caption: Some members of the Tarasov Lab on a collection expedition to Madagascar
@@ -50,6 +54,7 @@ sitemap:
         - title: Publications
           link: publications.html
           subtitle: Publications out of the Tarasov Lab
+          show_in_nav: true
           title_image: radial-gradient(circle, rgba(0, 0, 0, .4) 30%, rgba(0, 0, 0, 0) 100%), url('../webp/Pagetitle-Proagoderus-watanabei-CC-BY-NC-Otto-Bylén-Claesson-inaturalist-observations-59314076-2048x612.webp')
           title_image_position_x: 80%
           title_image_caption: <em>Proagoderus watanabei</em> CC-BY-NC Otto Bylén Claesson</a>
@@ -87,7 +92,6 @@ sitemap:
         #  title_image_position_x: 50%
         #  title_image_caption: Rainbow scarab (<em>Phanaeus vindex</em>) CC-BY Joe Brewer
         #  title_image_caption_link: https://www.inaturalist.org/observations/76312443
-
 
     second:
 
