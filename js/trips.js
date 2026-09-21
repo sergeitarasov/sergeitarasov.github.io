@@ -5,6 +5,8 @@ function tripsYaml2Html(trips) {
 	// For each trip
     for (const trip of trips) {
 
+		if(trip['show_in_trips'] == false) continue;
+		
 		entries += '<a href=' + trip['link'] + ' title="Go to the page for the trip ' + trip['name'] + '" >';
 
 			entries += "<div class='col-2-stack trips' >";
