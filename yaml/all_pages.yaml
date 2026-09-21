@@ -108,6 +108,7 @@ sitemap:
             - title: Madagascar 2026
               name: Madagascar fossil hunt 2026
               link: trips/madagascar-fossil-hunt-2026.html
+              show_in_trips: true
               preview_image: webp/TEMP-image-placeholder-1024x1024.webp
               blurb: We set out for the Madagascar in search of new fossil species of dung beetles to fill gaps in our understanding of the island's recent ecological history.
               title_image: radial-gradient(circle, rgba(0, 0, 0, .4) 30%, rgba(0, 0, 0, 0) 100%), url('../webp/Pagetitle-Phanaeus-furiosus-CC-BY-NC-Ricardo-Arredondo-T-inaturalist-observations-88457335-2048x612.webp')
@@ -118,6 +119,7 @@ sitemap:
             - title: Paris 2025
               name: Muséum national d'Histoire naturelle 2025 
               link: trips/museum-national-dHistoire-naturelle-2025.html
+              show_in_trips: false
               preview_image: webp/TEMP-image-placeholder-1024x1024.webp
               blurb: Natural history museums hold a treasure trove of data in the form of specimens collected over the past centuries and the Muséum national d'Histoire naturelle in Paris has one of the world's largest such collections.
               title_image: radial-gradient(circle, rgba(0, 0, 0, .4) 30%, rgba(0, 0, 0, 0) 100%), url('../webp/Pagetitle-Phanaeus-furiosus-CC-BY-NC-Ricardo-Arredondo-T-inaturalist-observations-88457335-2048x612.webp')
