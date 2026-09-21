@@ -694,7 +694,10 @@
 			background-attachment: scroll !important;
 			background-size: cover !important;
 		}
-
+		section.page-title.index {
+			padding-left: 27%;
+			text-align: center !important;
+		}
 	}
 	@media (min-width: 1001px) { /* Wider than 1000px */
 
@@ -708,6 +711,8 @@
 		.index.col-2-stack div.right-col {
 			padding-left: 40px;
 		}
+	}
+	@media (min-width: 1001px) and (max-width: 1469px) {
 		section.page-title.index {
 			padding-left: 23%;
 			text-align: center !important;
