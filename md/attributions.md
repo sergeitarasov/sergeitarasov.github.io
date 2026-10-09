@@ -2,6 +2,10 @@
 
 This site was designed by [Aaron Olsen at 3D Anatomy Studios](https://www.3danatomystudios.com) to function as a static website for [Github Pages](https://pages.github.com/) but with most of the site's content pulled directly from Bibtex, YAML, and Markdown files. Each time a page is loaded on the site, Javascript parses any relevant Bibtex, YAML, and Markdown files and builds the page using JavaScript's Document Object Model (DOM).
 
+## Site hosting
+
+This site is hosted as a [Github Pages](https://pages.github.com/) site with a public repository at [github.com/sergeitarasov/sergeitarasov.github.io](https://github.com/sergeitarasov/sergeitarasov.github.io). The site's [main repository page](https://github.com/sergeitarasov/sergeitarasov.github.io) lists all of the contributors to the site and includes a README section with detailed instructions on making site updates.
+
 ## Javascript libraries
 
 This site uses the following Javascript libraries:
